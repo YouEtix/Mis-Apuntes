@@ -24,3 +24,6 @@ php bin/magento setup:upgrade --keep-generated
 
 ## EN CASO DE QUE PERSISTAN LOS PROBLEMAS CON LOS PERMISOS
 chmod 777 -R generated/* var/* pub/*
+
+## Borrar para evitar tener mismos errores a nivel frontend. Hacerlo antes de deployar
+sudo rm -rf /var/cache /var/view_processed/ var/page_cache/ pub/static/frontend/ generated/
