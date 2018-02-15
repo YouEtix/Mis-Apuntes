@@ -27,3 +27,9 @@ chmod 777 -R generated/* var/* pub/*
 
 ## Borrar para evitar tener mismos errores a nivel frontend. Hacerlo antes de deployar
 sudo rm -rf /var/cache /var/view_processed/ var/page_cache/ pub/static/frontend/ generated/
+
+## DEPLOYAR EL TEMA CON UN PAQUETE DE IDIOMA ESPECIFICO
+php bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
+
+## Desactivar el cache (recomendable para modo developer)
+php bin/magento cache:dis
