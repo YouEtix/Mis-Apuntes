@@ -33,3 +33,8 @@ php bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
 
 ## Desactivar el cache (recomendable para modo developer)
 php bin/magento cache:dis
+
+##FIJAR TEMA DE LUMA
+php bin/magento sampledata:deploy
+php bin/magento setup:upgrade
+php bin/magento s:s:d -ft Magento/luma
