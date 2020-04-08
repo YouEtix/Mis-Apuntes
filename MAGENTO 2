@@ -1,8 +1,14 @@
 ## XML VALIDACION
 php bin/magento dev:urn-catalog:generate .idea/misc.xml
 
+## Compilar
+php bin/magento setup:di:compile
+
 ## HABILITAR NUEVO MODULO CREADO
 php bin/magento module:enable <nombre_modulo>
+
+## INSTALAR MODULOS
+php bin/magento setup:install
 
 ## LISTAR TODOS LOS MODULOS QUE SE TIENEN EN MAGENTO
 php bin/magento module:status
@@ -21,6 +27,13 @@ php bin/magento s:s:d -ft Magento/luma
 
 ## SOLO DEBE SER USADA EN ALGUNAS OCASIONES BAJO INTEGRACION, SU USO MUY SEGUIDO NO ES MUY RECOMENDABLE
 php bin/magento setup:upgrade --keep-generated
+
+## EJEMPLO DE CREAR CREDENCIAL ADMIN:
+php bin/magento admin:user:create --admin-user="admin" 
+--admin-password="123123q" 
+--admin-email="admin@example.com" 
+--admin-firstname="Admin" 
+--admin-lastname="Admin"
 
 ## EN CASO DE QUE PERSISTAN LOS PROBLEMAS CON LOS PERMISOS
 chmod 777 -R generated/* var/* pub/*
