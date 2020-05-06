@@ -5,37 +5,34 @@ php7.3-gd php7.3-intl  php7.3-mysql php7.3-soap php7.3-xml php7.3-zip php7.3-com
 sudo apt-get install libapache2-mod-php7.3 php7.3-cli php7.3-recode php7.3-tidy php7.3-xmlrpc
 
 ## XML VALIDACION
-php bin/magento dev:urn-catalog:generate .idea/misc.xml
+bin/magento dev:urn-catalog:generate .idea/misc.xml
 
 ## Compilar
-php bin/magento setup:di:compile
+bin/magento setup:di:compile
 
 ## HABILITAR NUEVO MODULO CREADO
-php bin/magento module:enable <nombre_modulo>
+bin/magento module:enable <nombre_modulo>
 
 ## INSTALAR MODULOS
-php bin/magento setup:install
+bin/magento setup:install
 
 ## LISTAR TODOS LOS MODULOS QUE SE TIENEN EN MAGENTO
-php bin/magento module:status
+bin/magento module:status
 
 ## REGISTRAR NUEVOS MODULOS A LA BD DE MAGENTO
-php bin/magento setup:upgrade
+bin/magento setup:upgrade
 
 ## LIMPIAR CACHE
-php bin/magento cache:flush
-
-## DEPLOYAR
-php bin/magento s:s:d -f
+bin/magento cache:flush
 
 ## DEPLOYAR CON TEMA DE LUMA
-php bin/magento s:s:d -ft Magento/luma
+bin/magento s:s:d -ft Magento/luma
 
 ## SOLO DEBE SER USADA EN ALGUNAS OCASIONES BAJO INTEGRACION, SU USO MUY SEGUIDO NO ES MUY RECOMENDABLE
-php bin/magento setup:upgrade --keep-generated
+bin/magento setup:upgrade --keep-generated
 
 ## EJEMPLO DE CREAR CREDENCIAL ADMIN:
-php bin/magento admin:user:create --admin-user="admin" 
+bin/magento admin:user:create --admin-user="admin" 
 --admin-password="123123q" 
 --admin-email="admin@example.com" 
 --admin-firstname="Admin" 
@@ -44,16 +41,22 @@ php bin/magento admin:user:create --admin-user="admin"
 ## EN CASO DE QUE PERSISTAN LOS PROBLEMAS CON LOS PERMISOS
 chmod 777 -R generated/* var/* pub/*
 
-## Borrar para evitar tener mismos errores a nivel frontend. Hacerlo antes de deployar
-sudo rm -rf var/  pub/static/frontend/ generated/
+## Borrar contenido al hacer cambios en el front. Hacerlo antes de deployar
+rm -rf var/  pub/static/frontend/ generated/
+
+## Borrar contenido al hacer cambios en el admin. Hacerlo antes de deployar
+rm -rf var/  pub/static/adminhtml/ generated/
+
+## DEPLOYAR
+bin/magento s:s:d -f
 
 ## DEPLOYAR EL TEMA CON UN PAQUETE DE IDIOMA ESPECIFICO
-php bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
+bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
 
 ## Desactivar el cache (recomendable para modo developer)
-php bin/magento cache:dis
+bin/magento cache:dis
 
 ##FIJAR TEMA DE LUMA
-php bin/magento sampledata:deploy
-php bin/magento setup:upgrade
-php bin/magento s:s:d -ft Magento/luma
+bin/magento sampledata:deploy
+bin/magento setup:upgrade
+bin/magento s:s:d -ft Magento/luma
