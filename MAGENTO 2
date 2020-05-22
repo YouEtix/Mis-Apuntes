@@ -56,7 +56,10 @@ bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
 ## Desactivar el cache (recomendable para modo developer)
 bin/magento cache:dis
 
-##FIJAR TEMA DE LUMA
+## FIJAR TEMA DE LUMA
 bin/magento sampledata:deploy
 bin/magento setup:upgrade
 bin/magento s:s:d -ft Magento/luma
+
+## Admin URL
+bin/magento info:adminuri
