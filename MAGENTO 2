@@ -56,6 +56,13 @@ bin/magento s:s:d -ft <vendor>/<modulo> es_MX (para espaniol mexico)
 ## Desactivar el cache (recomendable para modo developer)
 bin/magento cache:dis
 
+## Modo en Mantenimiento
+bin/magento maintenance:enable
+bin/magento maintenance:disable
+
+## Reindexacion
+bin/magento indexer:reindex
+
 ## FIJAR TEMA DE LUMA
 bin/magento sampledata:deploy
 bin/magento setup:upgrade
