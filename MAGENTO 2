@@ -70,3 +70,7 @@ bin/magento s:s:d -ft Magento/luma
 
 ## Admin URL
 bin/magento info:adminuri
+
+## Magento MODE
+bin/magento deploy:mode:set developer/production
+bin/magento deploy:mode:show
