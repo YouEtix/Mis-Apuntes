@@ -1,0 +1,24 @@
+Instalar Laravel en Composer:
+composer create-project --prefer-dist laravel/laravel <project_name> <versio>
+
+Ver comandos:
+php artisan 
+
+Ejecutar proyecto:
+php artisan serve
+
+Instalar laravel ui:
+composer require laravel/ui <version>
+
+Ejemplo UI:
+php artisan ui -h
+php artisan ui vue --auth
+Instalar npm install
+ejecutar npm run dev
+ejecuta cambios en tiempo real: npm run watch
+
+Limpiar Cache
+php artisan config:cache
+
+Migraciones:
+php artisan migrate
