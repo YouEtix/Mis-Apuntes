@@ -22,3 +22,10 @@ php artisan config:cache
 
 Migraciones:
 php artisan migrate
+
+Model:
+mayor informacion: php artisan make:model -h
+php artisan make:model -a (crea archivos para migracion, controlador, modelo, seeder)
+
+Controller:
+php artisan route:list --name={nombre}
