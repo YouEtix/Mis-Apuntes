@@ -22,6 +22,8 @@ php artisan config:cache
 
 Migraciones:
 php artisan migrate
+php artisan make:migration <nombre de la migracion>
+php artisan migrate:rollback
 
 Model:
 mayor informacion: php artisan make:model -h
