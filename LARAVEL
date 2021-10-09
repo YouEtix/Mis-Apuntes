@@ -37,3 +37,6 @@ Seeder:
 php artisan db:seed
 php artisan migrate:fresh --seed
 php artisan make:seeder <Name>
+
+404 Error:
+php artisan vendor:publish --tag=laravel-errors
