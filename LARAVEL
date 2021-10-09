@@ -31,6 +31,7 @@ php artisan make:model -a (crea archivos para migracion, controlador, modelo, se
 
 Controller:
 php artisan route:list --name={nombre}
+php artisan make:controller <nombre> -r --model=<modelo> 
 
 Seeder:
 php artisan db:seed
