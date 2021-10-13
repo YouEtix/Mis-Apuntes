@@ -40,3 +40,7 @@ php artisan make:seeder <Name>
 
 404 Error:
 php artisan vendor:publish --tag=laravel-errors
+
+To production:
+After change the variable APP_ENV to "production" in .env file, use this comnand
+php artisan migrate:fresh
