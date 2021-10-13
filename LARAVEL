@@ -34,9 +34,10 @@ php artisan route:list --name={nombre}
 php artisan make:controller <nombre> -r --model=<modelo> 
 
 Seeder:
-php artisan db:seed
-php artisan migrate:fresh --seed
-php artisan make:seeder <Name>
+php artisan db:seed -->ejecuta los seeds
+php artisan migrate:fresh --seed -->borra todos los datos creados por seeds y los ejecuta nuevamente
+php artisan make:seeder <Name> --> crea nuevo seed
+php artisan db:seed --class {nombre de la clase} -->ejecuta un seed especifico
 
 404 Error:
 php artisan vendor:publish --tag=laravel-errors
@@ -44,3 +45,9 @@ php artisan vendor:publish --tag=laravel-errors
 To production:
 After change the variable APP_ENV to "production" in .env file, use this comnand
 php artisan migrate:fresh
+
+Middleware:
+php artisan make:middleware <nombre>
+
+Policy:
+php artisan make:policy <nombre> --model= {nombre de la clase modelo}
