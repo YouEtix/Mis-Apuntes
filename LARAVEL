@@ -51,3 +51,15 @@ php artisan make:middleware <nombre>
 
 Policy:
 php artisan make:policy <nombre> --model= {nombre de la clase modelo}
+
+
+Vagrant:
+Create configuration file for homestead:
+vendor/bin/homestead make
+EN homestead.yaml el ip debe ser considerado en el /etc/hosts  y apuntar con la 
+direccion sites.map
+comandos vagrant:
+- vagrant up -> levantar servicio
+- vagrant destroy -> elimina la maquina virtual
+- vagrant halt -> pausa maquina virtual
+- vagrant ssh -> trabajar dentro la maquina virtual
