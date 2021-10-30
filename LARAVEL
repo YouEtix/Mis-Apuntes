@@ -63,3 +63,6 @@ comandos vagrant:
 - vagrant destroy -> elimina la maquina virtual
 - vagrant halt -> pausa maquina virtual
 - vagrant ssh -> trabajar dentro la maquina virtual
+
+
+compsoer require guzzlehttp/guzzle --> requests and trivial to integrate with web services.
