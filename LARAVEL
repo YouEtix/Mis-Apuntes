@@ -69,3 +69,8 @@ compsoer require guzzlehttp/guzzle --> requests and trivial to integrate with we
 composer require spatie/laravel-fractal
 
 php artisan make:transformer <name>
+
+composer require laravel/passport
+php artisan passport:install  --> preparar Passport para su uso
+php artisan passport:client --> crear cliente para los tokens
+php artisan passport:client --passport
