@@ -52,10 +52,12 @@ php artisan make:middleware <nombre>
 Policy:
 php artisan make:policy <nombre> --model= {nombre de la clase modelo}
 
-
+visual components:
+composer require laravel/ui
 Vagrant:
+composer require laraverl/homestead
 Create configuration file for homestead:
-vendor/bin/homestead make
+php vendor/bin/homestead make
 EN homestead.yaml el ip debe ser considerado en el /etc/hosts  y apuntar con la 
 direccion sites.map
 comandos vagrant:
