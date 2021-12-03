@@ -1,8 +1,41 @@
+## INSTALACION
 ## Dpendencias PHP
-sudo apt-get install php7.3 php7.3-bcmath php7.3-curl php7.3-fpm php7.3-mbstring
-php7.3-gd php7.3-intl  php7.3-mysql php7.3-soap php7.3-xml php7.3-zip php7.3-common php7.3-imagick -y;
+sudo apt-get install php7.x php7.x-bcmath php7.x-curl php7.x-fpm php7.x-mbstring
+php7.x-gd php7.x-intl  php7.x-mysql php7.x-soap php7.x-xml php7.x-zip php7.x-common php7.x-imagick -y;
 
-sudo apt-get install libapache2-mod-php7.3 php7.3-cli php7.3-recode php7.3-tidy php7.3-xmlrpc
+sudo apt-get install libapache2-mod-php7.x php7.x-cli php7.x-recode php7.x-tidy php7.x-xmlrpc
+
+# APACHE
+sudo apt install apache2 -y;
+sudo apt install libapache2-mod-fcgid -y;
+sudo a2enmod rewrite proxy_fcgi;
+sudo a2enconf php7.x-fpm;
+sudo service apache2 restart;
+
+# Cambiar username en envvars y php-fpm
+# en /etc/apache2/envvars:
+ user = my_user
+ group = my_group
+# lo mismo en /etc/php/7.x/fpm/pool.d/www.conf
+ listen.user = my_user
+ listen.group = my_group
+ 
+* Para version 2.3.7 o superiores usar este comando al momento de instalar:
+php bin/magento setup:install \
+  --admin-firstname=Oscar \
+  --admin-lastname=Gamboa \
+  --admin-email=oscar@mail.com \
+  --admin-user=05K4R1N \
+  --admin-password=05K4R1N123 \
+  --base-url=http://127.0.0.1/proyecto/ \
+  --db-host=localhost \
+  --db-name=dbname \
+  --db-user=root \
+  --db-password=3sk4p4r4t3 \
+  --currency=USD \
+  --timezone=America/Chicago \
+  --language=en_US \
+  --use-rewrites=1;
 
 ## XML VALIDACION
 bin/magento dev:urn-catalog:generate .idea/misc.xml
