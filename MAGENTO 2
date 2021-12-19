@@ -5,6 +5,9 @@ php7.x-gd php7.x-intl  php7.x-mysql php7.x-soap php7.x-xml php7.x-zip php7.x-com
 
 sudo apt-get install libapache2-mod-php7.x php7.x-cli php7.x-recode php7.x-tidy php7.x-xmlrpc
 
+# MYSQL
+sudo apt install mysql-server -y;
+
 # APACHE
 sudo apt install apache2 -y;
 sudo apt install libapache2-mod-fcgid -y;
