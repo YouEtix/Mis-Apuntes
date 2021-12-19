@@ -23,6 +23,13 @@ sudo service apache2 restart;
  listen.user = my_user
  listen.group = my_group
  
+* En caso de error del xdebug cambiar en vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php
+
+if (!(bool)$debugMode && extension_loaded('xdebug')) {
+    if (function_exists('xdebug_disable')) {
+        xdebug_disable();
+    }
+}
 * Para version 2.3.7 o superiores usar este comando al momento de instalar:
 php bin/magento setup:install \
   --admin-firstname=Oscar \
