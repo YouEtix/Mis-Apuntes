@@ -4,7 +4,7 @@ composer require --dev phpunit/phpunit
 # Alias
 alias phpunit="./vendor/phpunit/phpunit/phpunit"
 
-How does it work?
+# How does it work?
 * All class name needs to have the word "Test" at the end, for example: class UserTest
 * Every class needs to be extended to \PHPUnit\Framework\TestCase
 * All methods inside the test class need to have as a prefix the word "test" like "public function testFunctionExample()"
@@ -14,3 +14,17 @@ How does it work?
   */
   public function functionExample()
 * In order to check the test for equal value, you can use assertEquals(expectedValue, method($x, $y)
+
+# Options
+Command in order to filter the method and run the test
+* phpunit  <directory> --filter=<name_function>
+Command in order to add color to the test result
+* phpunit <directory> --color
+More information or guide about phpunit commands
+* phpunit -h
+More detail in test result
+* phpunit --verbose=true
+If there any change has been made in composer.json file, you  need to run the command:
+* composer dump-autoload
+For the autoload class use the following command:
+* phpunit --bootstrap="vendor/autoload.php"
