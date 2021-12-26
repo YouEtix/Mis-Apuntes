@@ -1,0 +1,16 @@
+# Installl PHP Unit Testing
+composer require --dev phpunit/phpunit
+
+# Alias
+alias phpunit="./vendor/phpunit/phpunit/phpunit"
+
+How does it work?
+* All class name needs to have the word "Test" at the end, for example: class UserTest
+* Every class needs to be extended to \PHPUnit\Framework\TestCase
+* All methods inside the test class need to have as a prefix the word "test" like "public function testFunctionExample()"
+* Also insted of writing the prefix "test" in methods name, you can write in description method the following:
+  /**
+  * @test
+  */
+  public function functionExample()
+* In order to check the test for equal value, you can use assertEquals(expectedValue, method($x, $y)
