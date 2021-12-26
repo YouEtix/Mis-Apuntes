@@ -28,3 +28,11 @@ If there any change has been made in composer.json file, you  need to run the co
 * composer dump-autoload
 For the autoload class use the following command:
 * phpunit --bootstrap="vendor/autoload.php"
+
+Metodos ya definidos en un Test class:
+setUp(): Siempre se ejecuta antes de que cada funcion  de la test class sea ejecutada.
+tearDown(): Siempre se ejecuta despues de que la funcion de la test class se haya ejecutado.
+setUpBeforeClass(): Se ejecuta antes de que la test class sea ejecutada.
+tearDownAfterClass(): Se ejecuta despeus de que la test class se ha ejecutado.
+
+*expectException y expectExceptionMessage("mensaje....") son ejecutadas siempre y cuando se este esperando un error.
