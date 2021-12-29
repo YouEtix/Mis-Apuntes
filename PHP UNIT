@@ -1,4 +1,4 @@
-# Installl PHP Unit Testing
+# Install PHP Unit Testing
 composer require --dev phpunit/phpunit
 
 # Alias
@@ -36,3 +36,9 @@ setUpBeforeClass(): Se ejecuta antes de que la test class sea ejecutada.
 tearDownAfterClass(): Se ejecuta despeus de que la test class se ha ejecutado.
 
 *expectException y expectExceptionMessage("mensaje....") son ejecutadas siempre y cuando se este esperando un error.
+
+#Install Mockery
+composer require mockery/mockery --dev
+
+#Integrar Mockery
+class <Name> extends MokceryTestCase
