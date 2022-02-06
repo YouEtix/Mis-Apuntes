@@ -1,0 +1,38 @@
+# INSTALACION ELASTICSEARCH
+
+# Instalar openjdk
+apt-get install -y openjdk-8-jdk
+
+# Verifica que Java este instalado
+java -version
+
+# Comienza a instalar elasticsearch
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# Agrega Elastic-7.x.list a directorio source.list.d
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+# Instala Elasticsearch
+sudo apt install elasticsearch
+
+# Configura Elasticsearch
+Agrega puerto 8080 en apache en el archivo /etc/apache2/ports.conf
+Listen 8080
+
+# Crea un archivo virtua host para elasticsearch elasticsearch.conf en /etc/apache2/sites-available/ debe tener el archivo lo siguiente:
+<VirtualHost *:8080>
+    ProxyPass "/" "http://localhost:9200/"
+    ProxyPassReverse "/" "http://localhost:9200/"
+</VirtualHost>
+
+# Guarda el archivo host y ejecuta el siguiente comando:
+sudo a2ensite elasticsearch.conf
+
+# Reinicia Apache2
+sudo service apache2 restart
+
+# Inicia Elasticsearch
+sudo service elasticsearch start
+
+# Verifica que elasticsearch este funcionando correctamente
+curl -X GET 'http://localhost:9200'
