@@ -30,6 +30,7 @@ if (!(bool)$debugMode && extension_loaded('xdebug')) {
         xdebug_disable();
     }
 }
+
 * Para version 2.3.7 o superiores usar este comando al momento de instalar:
 php bin/magento setup:install \
   --admin-firstname=Oscar \
@@ -41,7 +42,7 @@ php bin/magento setup:install \
   --db-host=localhost \
   --db-name=dbname \
   --db-user=root \
-  --db-password=3sk4p4r4t3 \
+  --db-password=05k4r1n123 \
   --currency=USD \
   --timezone=America/Chicago \
   --language=en_US \
