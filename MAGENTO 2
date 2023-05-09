@@ -118,3 +118,8 @@ bin/magento info:adminuri
 ## Magento MODE
 bin/magento deploy:mode:set developer/production
 bin/magento deploy:mode:show
+
+#Patch
+bin/magento setup:db-declaration:generate-patch –type=schema Vendor_Modulo NombreArchivo
+bin/magento setup:db-declaration:generate-patch –type=data Vendor_Modulo NombreArchivo
+
