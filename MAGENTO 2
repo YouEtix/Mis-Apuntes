@@ -115,6 +115,9 @@ bin/magento s:s:d -ft Magento/luma
 ## Admin URL
 bin/magento info:adminuri
 
+## Change frontnane admin url
+bin/magento setup:config:set --backend-frontname="admin"
+
 ## Magento MODE
 bin/magento deploy:mode:set developer/production
 bin/magento deploy:mode:show
