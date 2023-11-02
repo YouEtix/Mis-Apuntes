@@ -25,6 +25,10 @@ Listen 8080
     ProxyPassReverse "/" "http://localhost:9200/"
 </VirtualHost>
 
+# Si no esta activado el modulo proxy en apache debe ser habilitado 
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+
 # Guarda el archivo host y ejecuta el siguiente comando:
 sudo a2ensite elasticsearch.conf
 
